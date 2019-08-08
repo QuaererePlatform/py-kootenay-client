@@ -1,20 +1,21 @@
 #!/usr/bin/env python
-"""Setup for the willamette micro-service, part of the Quaerere Platform
+"""Setup for the python client of the willamette micro-service.
+Part of the Quaerere Platform.
 """
 import os
 import sys
 
-from setuptools import find_packages, setup
+from setuptools import setup
 from setuptools.command.install import install
 
 PROJECT_NAME = 'quaerere-willamette-client'
 INSTALL_REQUIRES = [
     'requests',
-    'quaerere-base-client',
-    'quaerere-willamette-common']
+    'quaerere-base-client>=0.1.0a',
+    'quaerere-willamette-common>=0.2.0']
 SETUP_REQUIRES = [
     'pytest-runner',
-    'Sphinx>=1.8.0',
+    'Sphinx<2,>=1.8.0',
     'sphinx-rtd-theme',
     'setuptools']
 TESTS_REQUIRES = [
